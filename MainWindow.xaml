@@ -1,0 +1,40 @@
+﻿<Window x:Class="ClickerDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ClickerDemo"
+        mc:Ignorable="d"
+        Title="Money Maker" Height="450" Width="800">
+    <Grid>
+
+        
+        <Label x:Name="lblDollarNum" Content="Label" HorizontalAlignment="Left" Margin="23,323,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.803,0.831"/>
+        <Label x:Name="lblGemNum" Content="Label" HorizontalAlignment="Left" Margin="231,323,0,0" VerticalAlignment="Top"/>
+        <ProgressBar x:Name="DollarProgress" HorizontalAlignment="Left" Height="235" Margin="90,115,0,0" VerticalAlignment="Top" Width="36" SmallChange="5" LargeChange="20" Orientation="Vertical" RenderTransformOrigin="0.5,0.5">
+            <ProgressBar.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-35"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-10.173"/>
+                </TransformGroup>
+            </ProgressBar.RenderTransform>
+        </ProgressBar>
+        <ProgressBar x:Name="GemProgress" HorizontalAlignment="Left" Height="229" Margin="167,116,0,0" VerticalAlignment="Top" Width="40" LargeChange="10" SmallChange="1" Orientation="Vertical" RenderTransformOrigin="0.5,0.5">
+            <ProgressBar.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="35"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-7.463"/>
+                </TransformGroup>
+            </ProgressBar.RenderTransform>
+        </ProgressBar>
+        <Button x:Name="btnDollarCharge" Content="Charge Dollar" HorizontalAlignment="Left" Margin="23,377,0,0" VerticalAlignment="Top" Height="25" Width="105" Click="btnDollarCharge_Click"/>
+        <Button x:Name="btnChargeGem" Content="Charge Gem" HorizontalAlignment="Left" Margin="167,377,0,0" VerticalAlignment="Top" Height="25" Width="102" Click="btnChargeGem_Click"/>
+        <Label x:Name="lblDollars" Content="Dollars:" HorizontalAlignment="Left" Margin="17,293,0,111" Height="30" Width="50" Panel.ZIndex="1"/>
+        <Label x:Name="lblGems" Content="Gems:" HorizontalAlignment="Left" Margin="230,290,0,116" Width="50" Height="30" Panel.ZIndex="1"/>
+
+    </Grid>
+</Window>
